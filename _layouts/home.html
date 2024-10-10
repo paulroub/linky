@@ -62,12 +62,18 @@ layout: default
         {% assign current_date = site.time | date: "%Y-%m-%d" %}
         {% assign valid_links = site.links | where_exp: "link", "link.expires == nil or link.expires >= current_date" %}
 
-        {% for link in valid_links %}
-        <li class="link">
-            <a href="{{ link.url }}"><picture>
-                    <img src="{{ link.image }}" class="link-logo" alt="{{ link.title }}"> </a>
-            <a class="link-desc" href="{{ link.url }}">{{ link.title }}</a>
-        </li>
+        {% assign priorities = valid_links | sort: "priority" | group_by: 'priority'  %}
+
+        {% for priority in priorities %}
+            {% assign sorted_links = priority.items | sort: 'title' %}
+
+            {% for link in sorted_links %}
+                <li class="link">
+                    <a href="{{ link.url }}"><picture>
+                            <img src="{{ link.image }}" class="link-logo" alt="{{ link.title }}"> </a>
+                    <a class="link-desc" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endfor %}
         {% endfor %}
     </ul>
 
