@@ -5,9 +5,17 @@
     --base-font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
         helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol";
+    --body-background: #fa0616;
+    --body-foreground: #f0f0f0;
+    --button-background: #f16293;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
+    background-color: var(--body-background);
     font-family: var(--base-font-family);
 }
 
@@ -88,6 +96,10 @@ li.link {
 .site-header {
     border: none;
     margin: 1em auto 0;
+}
+
+.page-content {
+    padding-top: 0;
 }
 
 .page-content .instagram-media,
