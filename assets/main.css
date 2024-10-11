@@ -11,6 +11,8 @@
     --body-background: {{ site.linky.body_background | default: "#fa0616" }};
     --body-foreground: {{ site.linky.body_foreground |  default: "#f0f0f0" }};
     --button-background: {{ site.linky.button_background |  default: "#f16293" }};
+    --button-foreground: {{ site.linky.button_foreground |  default: "#f0f0f0" }};
+    --content-width-max: 640px;
 }
 
 * {
@@ -23,7 +25,7 @@ body {
 }
 
 .wrapper {
-    max-width: 640px;
+    max-width: var(--content-width-max);
     margin: 0 auto;
 }
 
@@ -97,8 +99,11 @@ li.link {
 }
 
 .site-header {
+    max-width: var(--content-width-max);
     border: none;
     margin: 1em auto 0;
+    padding: 1em 0 0;
+    background-color: var(--body-background);
 }
 
 .page-content {

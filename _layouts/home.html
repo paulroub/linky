@@ -28,16 +28,51 @@ layout: default
             <a href="https://instagram.com/{{ site.instagram_username }}"
                 ><img
                     src="/assets/images/instagram-logo.svg"
-                    alt="TikTok"
+                    alt="Instagram"
                     class="social-logo"
             /></a>
         </li>
-        {%- endif -%} {%- if site.cashapp_username -%}
+        {%- endif -%}
+
+        {%- if site.email -%}
+        <li>
+            <a href="mailto:{{ site.email }}"
+                ><img
+                    src="/assets/images/email-logo.svg"
+                    alt="email"
+                    class="social-logo"
+            /></a>
+        </li>
+        {%- endif -%}
+
+        {%- if site.threads_username -%}
+        <li>
+            <a href="https://threads.net/@{{ site.threads_username }}"
+                ><img
+                    src="/assets/images/threads-logo.svg"
+                    alt="Threads"
+                    class="social-logo"
+            /></a>
+        </li>
+        {%- endif -%}
+
+        {%- if site.pinterest_username -%}
+        <li>
+            <a href="https://pinterest.com/{{ site.pinterest_username }}"
+                ><img
+                    src="/assets/images/pinterest-logo.svg"
+                    alt="Pinterest"
+                    class="social-logo"
+            /></a>
+        </li>
+        {%- endif -%}
+
+        {%- if site.cashapp_username -%}
         <li>
             <a href="https://cash.app/${{ site.cashapp_username }}"
                 ><img
                     src="/assets/images/cashapp-logo.svg"
-                    alt="TikTok"
+                    alt="Cash App"
                     class="social-logo"
             /></a>
         </li>
@@ -46,7 +81,7 @@ layout: default
             <a href="https://venmo.com/u/{{ site.venmo_username }}"
                 ><img
                     src="/assets/images/venmo-logo.svg"
-                    alt="TikTok"
+                    alt="Venmo"
                     class="social-logo"
             /></a>
         </li>
@@ -69,7 +104,7 @@ layout: default
 
             {% for link in sorted_links %}
                 <li class="link">
-                    <a href="{{ link.url }}"><picture>
+                    <a href="{{ link.url }}">
                             <img src="{{ link.image }}" class="link-logo" alt="{{ link.title }}"> </a>
                     <a class="link-desc" href="{{ link.url }}">{{ link.title }}</a>
                 </li>
