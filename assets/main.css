@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Rock+Salt&display=swap");
 
 :root {
-    --base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    --base-font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+        helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol";
 }
 
@@ -17,11 +17,11 @@ body {
 }
 
 .subheads {
-    font-family: "Cabin", helvetica, verdana, sans-serif;
+    font-family: Cabin, helvetica, verdana, sans-serif;
     font-style: italic;
     font-size: 32px;
     text-align: center;
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
 }
 
 .socials {
@@ -55,6 +55,7 @@ body {
     width: 1.5em;
     display: block;
     flex: 0;
+    border-radius: 0.75em;
 }
 
 .links {
@@ -98,19 +99,6 @@ li.link {
     margin: 1em auto;
 }
 
-.link {
-    font-size: 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 0.5em;
-}
-
-.link-desc {
-    flex: 1;
-}
-
 .cite {
     font-style: italic;
 }
@@ -127,33 +115,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.link-logo {
-    height: 1.5em;
-    width: 1.5em;
-    display: block;
-    flex: 0;
-    border-radius: 0.75em;
-}
-
-.links {
-    padding: 0;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 600px;
-}
-
-li.link {
-    list-style: none;
-    margin: 1em auto;
-    min-width: 150px;
-    max-width: 600px;
-    background-color: var(--button-background);
-    padding: 0.5em;
-    border-radius: 1em;
-    cursor: pointer;
-    text-align: center;
-}
-
 h1 {
     font-size: 64px;
     font-family: "Cabin Sketch", Helvetica, Verdana, sans-serif;
@@ -162,7 +123,7 @@ h1 {
     text-align: center;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
     h1 {
         font-size: 120px;
     }
