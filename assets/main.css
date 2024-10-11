@@ -8,9 +8,9 @@
     --base-font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
         helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol";
-    --body-background: #{{ site.linky.body_background | default "fa0616" }};
-    --body-foreground: #f0f0f0;
-    --button-background: #f16293;
+    --body-background: {{ site.linky.body_background | default: "#fa0616" }};
+    --body-foreground: {{ site.linky.body_foreground |  default: "#f0f0f0" }};
+    --button-background: {{ site.linky.button_background |  default: "#f16293" }};
 }
 
 * {
