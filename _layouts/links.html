@@ -103,7 +103,7 @@ layout: default
             {% assign sorted_links = priority.items | sort: 'title' %}
 
             {% for link in sorted_links %}
-                <li class="link">
+                <li class="link" data-priority="{{ link.priority }}">
                     <a href="{{ link.link }}">
                             <img src="{{ link.image }}" class="link-logo" alt="{{ link.title }}"> </a>
                     <a class="link-desc" href="{{ link.link }}">{{ link.title }}</a>

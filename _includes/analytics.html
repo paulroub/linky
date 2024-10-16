@@ -1,5 +1,8 @@
+<!-- what's our env? {{ jekyll.environment }}, {{ site.plausible_io }} -->
 {%- if jekyll.environment == 'production' -%}
-    {%- if site.google_analytics -%}
+        <!-- BEGIN ANALYTICS -->
+
+{%- if site.google_analytics -%}
         <script
             async
             src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
@@ -20,10 +23,14 @@
         </script>
     {%- endif -%}
     {%- if site.plausible_io -%}
+    <!-- BEGIN PLAUSIBLE -->
         <script
             defer
             data-domain="{{ site.plausible_io }}"
             src="https://plausible.io/js/script.outbound-links.js"
         ></script>
+    <!-- END PLAUSIBLE -->
     {%- endif -%}
-{%- endif -%}
+        <!-- END ANALYTICS -->
+
+    {%- endif -%}
