@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary  = "Linktree-ish theme for Jekyll, compatible with Decap CMS"
   spec.homepage = "http://github.com/paulroub/linky"
   spec.license  = "MIT"
-  s.metadata    = { "source_code_uri" => "https://github.com/paulroub/linky/" }
+  spec.metadata    = { "source_code_uri" => "https://github.com/paulroub/linky/" }
 
   spec.files    = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
 
