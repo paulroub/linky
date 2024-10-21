@@ -1,6 +1,11 @@
 # linky
 
-Work-in-progress linktree-esque theme, aiming for easy integration with Decap CMS.
+A linktree-esque theme, built for static hosting and easy maintenance with [Decap CMS][decap].
+
+<picture>
+    <source srcset="images/linky-home.webp" type="image/webp">
+    <img src="images/linky-home.png" alt="Linky Home Page">
+</picture>
 
 ## Installation
 
@@ -26,11 +31,9 @@ Or install it yourself as:
 
 ## Usage
 
-Use the [links layout][ll] on any page (including the home page) to display a list of all items in the `links` collection. Any additional content
-within your page will be displayed after the list.
+Use the [links layout][ll] on any page (including the home page) to display a list of all items in the `links` collection. Any additional content within your page will be displayed after the list.
 
-The `links` collection is defined by individual files in the `_links` folder. Only the YAML frontmatter of these files will be used; content
-is unnecessary and will be ignored.
+The `links` collection is defined by individual files in the `_links` folder. Only the YAML frontmatter of these files will be used; content is unnecessary and will be ignored.
 
 You will need to add a `links` collection to your Jekyll config, which is as simple as adding
 
@@ -58,8 +61,7 @@ subheads:
 
 ### Colors
 
-You can override the color scheme of a Links page by adding a `linky` section to your `_config.yml` (see [the example in this repo][config]) and
-setting one or more of these values:
+You can override the color scheme of a Links page by adding a `linky` section to your `_config.yml` (see [the example in this repo][config]) and setting one or more of these values:
 
 ```yml
 linky:
@@ -111,6 +113,28 @@ expires: 2024-11-11
     Note that this will only take effect on a rebuild; there's no runtime JavaScript, etc. to disable a link that's already been deployed.
 
 
+## Update Links with Decap CMS
+
+The whole point of this exercise (as opposed to adding links by hand or using a database-backed site) was to add/update links via a CMS, but still serve static HTML for the usual speed and safety reasons.
+
+In my case, I'm using [Decap CMS][decap] and [Netlify][netlify]. The Decap view for [linky.roub.net][linky-home] looks like this:
+
+<picture>
+    <source srcset="images/decap-home.webp" type="image/webp">
+    <img src="images/decap-home.png" alt="Decap CMS Home Page">
+</picture>
+
+Clicking on one of those links takes me to the detail page:
+
+<picture>
+    <source srcset="images/decap-detail.webp" type="image/webp">
+    <img src="images/decap-detail.png" alt="Decap CMS Detail Page">
+</picture>
+
+See the [admin folder][admin] for the relevant configuration, as well as the JS that allows for a custom preview styles (which just uses the site's CSS).
+
+Most of the admin's [config.yml][admin-config] will be the same regardless of your Decap setup, but some of the integration details (authorization, etc.) will differ if you're not using the same setup that I am. See the [Decap docs][decap-netlify] for information on the drop-in setup I'm using.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/paulroub/linky. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
@@ -122,3 +146,11 @@ The theme is available as open source under the terms of the [MIT License](https
 
 [ll]: https://github.com/paulroub/linky/blob/main/_layouts/links.html
 [config]: https://github.com/paulroub/linky/blob/main/_config.yml
+[linky-home]: https://linky.roub.net/
+[decap-home-image]: images/decap-home.png
+[decap-detail-image]: images/decap-detail.png
+[netlify]: https://netlify.com/
+[decap]: https://decapcms.org/
+[decap-netlify]: https://decapcms.org/docs/choosing-a-backend/#setup-on-netlify
+[admin]: https://github.com/paulroub/linky/blob/main/admin/
+[admin-config]: https://github.com/paulroub/linky/blob/main/admin/config.yml
