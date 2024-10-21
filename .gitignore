@@ -6,3 +6,6 @@ _site
 Gemfile.lock
 
 node_modules
+
+# Local Netlify folder
+.netlify
