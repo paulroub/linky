@@ -9,7 +9,7 @@ A linktree-esque theme, built for static hosting and easy maintenance with [Deca
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+Add this line to your [Jekyll][jekyll] site's `Gemfile`:
 
 ```ruby
 gem "linky"
@@ -154,3 +154,4 @@ The theme is available as open source under the terms of the [MIT License](https
 [decap-netlify]: https://decapcms.org/docs/choosing-a-backend/#setup-on-netlify
 [admin]: https://github.com/paulroub/linky/blob/main/admin/
 [admin-config]: https://github.com/paulroub/linky/blob/main/admin/config.yml
+[jekyll]: https://jekyllrb.com/
