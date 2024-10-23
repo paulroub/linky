@@ -30,8 +30,8 @@ if [ "$git_branch" != "main" ]; then
     exit 1
 fi
 
-echo git tag -a "$txt_version" -m "Release $txt_version"
-echo bundle exec gem build linky.gemspec
-echo bundle exec gem push "linky-$txt_version.gem"
-echo git push --tags
-echo git push
+git tag -a "$txt_version" -m "Release $txt_version"
+bundle exec gem build linky.gemspec
+bundle exec gem push "jekyll-theme-linky-$txt_version.gem"
+git push --tags
+git push
