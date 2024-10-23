@@ -135,6 +135,12 @@ See the [admin folder][admin] for the relevant configuration, as well as the JS 
 
 Most of the admin's [config.yml][admin-config] will be the same regardless of your Decap setup, but some of the integration details (authorization, etc.) will differ if you're not using the same setup that I am. See the [Decap docs][decap-netlify] for information on the drop-in setup I'm using.
 
+Copy the admin/index.html file from this repo into your Decap admin directory if you're using the matching Netlify setup. If not, make sure you add the script tag to enable our custom preview (it will work without the tag, but it will be ugly):
+
+```html
+<script src="/assets/preview.js"></script>
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/paulroub/linky. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.

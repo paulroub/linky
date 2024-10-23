@@ -28,4 +28,4 @@ var LinkPreview = createClass({
 });
 
 CMS.registerPreviewTemplate("links", LinkPreview);
-CMS.registerPreviewStyle("../assets/styles.css");
+CMS.registerPreviewStyle("/assets/styles.css");

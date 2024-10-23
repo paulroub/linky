@@ -35,6 +35,10 @@ theme: jekyll-theme-linky
 plugins:
     - jekyll-feed
 
+exclude:
+    - VERSION
+    - bin
+
 linky:
     body_background: "#030303"
     body_foreground: "#F0F0F0"
