@@ -12,13 +12,13 @@ A linktree-esque theme, built for static hosting and easy maintenance with [Deca
 Add this line to your [Jekyll][jekyll] site's `Gemfile`:
 
 ```ruby
-gem "linky"
+gem "jekyll-theme-linky"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: linky
+theme: jekyll-theme-linky
 ```
 
 And then execute:
@@ -27,7 +27,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install linky
+    $ gem install jekyll-theme-linky
 
 ## Usage
 
