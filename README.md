@@ -69,6 +69,7 @@ linky:
     body_foreground: "#f0f0f0"
     button_foreground: "#f16293"
     button_background: "#f16293"
+    social_button_color: "#ffffff"
 ```
 
 These alter the page's background and foreground, and the background and foreground of each link "button".

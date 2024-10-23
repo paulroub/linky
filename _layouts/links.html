@@ -15,75 +15,54 @@ layout: default
 
     <ul class="socials">
         {%- if site.tiktok_username -%}
-        <li>
-            <a href="https://www.tiktok.com/@{{ site.tiktok_username }}"
-                ><img
-                    src="/assets/images/tiktok-logo.svg"
-                    alt="TikTok"
-                    class="social-logo"
-            /></a>
+        <li class="social-link">
+            <a href="https://tiktok.com/@{{ site.tiktok_username }}"
+                >{% include tiktok-logo.svg %}</a>
+        </li>
+        {%- endif -%}
+
+        {%- if site.github_username -%}
+        <li class="social-link">
+            <a href="https://github.com/{{ site.github_username }}"
+                >{% include github-logo.svg %}</a>
         </li>
         {%- endif -%} {%- if site.instagram_username -%}
-        <li>
+        <li class="social-link">
             <a href="https://instagram.com/{{ site.instagram_username }}"
-                ><img
-                    src="/assets/images/instagram-logo.svg"
-                    alt="Instagram"
-                    class="social-logo"
-            /></a>
+                >{% include instagram-logo.svg %}</a>
         </li>
         {%- endif -%}
 
         {%- if site.email -%}
-        <li>
+        <li class="social-link">
             <a href="mailto:{{ site.email }}"
-                ><img
-                    src="/assets/images/email-logo.svg"
-                    alt="email"
-                    class="social-logo"
-            /></a>
+                >{% include email-logo.svg %}</a>
         </li>
         {%- endif -%}
 
         {%- if site.threads_username -%}
-        <li>
+        <li class="social-link">
             <a href="https://threads.net/@{{ site.threads_username }}"
-                ><img
-                    src="/assets/images/threads-logo.svg"
-                    alt="Threads"
-                    class="social-logo"
-            /></a>
+                >{% include threads-logo.svg %}</a>
         </li>
         {%- endif -%}
 
         {%- if site.pinterest_username -%}
-        <li>
+        <li class="social-link">
             <a href="https://pinterest.com/{{ site.pinterest_username }}"
-                ><img
-                    src="/assets/images/pinterest-logo.svg"
-                    alt="Pinterest"
-                    class="social-logo"
-            /></a>
+                >{% include pinterest-logo.svg %}</a>
         </li>
         {%- endif -%}
 
         {%- if site.cashapp_username -%}
-        <li>
+        <li class="social-link">
             <a href="https://cash.app/${{ site.cashapp_username }}"
-                ><img
-                    src="/assets/images/cashapp-logo.svg"
-                    alt="Cash App"
-                    class="social-logo"
-            /></a>
+                >{% include cashapp-logo.svg %}</a>
         </li>
         {%- endif -%} {%- if site.venmo_username -%}
-        <li>
+        <li class="social-link">
             <a href="https://venmo.com/u/{{ site.venmo_username }}"
-                ><img
-                    src="/assets/images/venmo-logo.svg"
-                    alt="Venmo"
-                    class="social-logo"
-            /></a>
+                >{% include venmo-logo.svg %}</a>
         </li>
         {%- endif -%}
     </ul>

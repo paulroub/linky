@@ -2,6 +2,7 @@ $linky_body_background: #fa0616 !default;
 $linky_body_foreground: #f0f0f0 !default;
 $linky_button_background: #f16293 !default;
 $linky_button_foreground: #f0f0f0 !default;
+$linky_social_button_color: #fff !default;
 
 :root {
     --base-font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
@@ -12,10 +13,31 @@ $linky_button_foreground: #f0f0f0 !default;
     --button-background: #{$linky_button_background};
     --button-foreground: #{$linky_button_foreground};
     --content-width-max: 640px;
+    --social-button-size: 3.5em;
+    --social-button-color: #{$linky_social_button_color};
 }
 
 * {
     box-sizing: border-box;
+}
+
+.social-link {
+    svg {
+        height: var(--social-button-size);
+        width: var(--social-button-size);
+
+        &.filled {
+            path {
+                fill: var(--social-button-color);
+            }
+        }
+
+        &.stroked {
+            path {
+                stroke: var(--social-button-color);
+            }
+        }
+    }
 }
 
 body {
