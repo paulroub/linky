@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name     = "jekyll-theme-linky"
-  spec.version  = "0.1.3"
+  spec.version  = "0.1.4"
   spec.authors  = ["Paul Roub"]
   spec.email    = ["paul@roub.net"]
 
@@ -15,6 +15,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.3"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
+  spec.add_runtime_dependency "jekyll-sass-converter", ">= 3.0.0"
 
   spec.required_ruby_version = ">= 2.5"
 end
