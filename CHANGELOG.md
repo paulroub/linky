@@ -1,7 +1,15 @@
+linky 0.1.6
+-------------------------
+
+#### FIXED
+
+- Custom link colors were not being properly applied
+
+
 linky 0.1.5
 -------------------------
 
-#### CHANGED
+#### ADDED
 
 - Social link logos can now be colored based on the `linky.social_button_color` config (default: white)
 
