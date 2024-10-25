@@ -1,3 +1,11 @@
+linky 0.1.8
+-------------------------
+
+#### FIXED
+
+- Social icons weren't limited in size and could overflow mobile screens
+- The mastodon icon was wonky with some background/foreground color combinations
+
 linky 0.1.7
 -------------------------
 
