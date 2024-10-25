@@ -25,6 +25,8 @@ $linky_social_button_color: #fff !default;
     svg {
         height: var(--social-button-size);
         width: var(--social-button-size);
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
 
         &.filled {
             path {
