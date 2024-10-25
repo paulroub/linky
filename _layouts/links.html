@@ -54,6 +54,21 @@ layout: default
         </li>
         {%- endif -%}
 
+        {%- if site.mastodon_username -%}
+            {% comment %}
+                Be forgiving -- allow for the username to be entered with or without the leading @
+            {% endcomment %}
+
+            {% assign parts = site.mastodon_username | split: "@" %}
+            {% if parts.size == 3 %}
+            {%     assign parts = parts | shift %}
+            {% endif %}
+            <li class="social-link">
+                <a href="https://{{ parts[1] }}/@{{ parts[0] }}"
+                    >{% include mastodon-logo.svg %}</a>
+            </li>
+        {%- endif -%}
+
         {%- if site.cashapp_username -%}
         <li class="social-link">
             <a href="https://cash.app/${{ site.cashapp_username }}"

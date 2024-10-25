@@ -1,3 +1,10 @@
+linky 0.1.7
+-------------------------
+
+#### ADDED
+
+- Add mastodon to the list of social icons
+
 linky 0.1.6
 -------------------------
 
