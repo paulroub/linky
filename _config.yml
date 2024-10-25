@@ -3,10 +3,10 @@ subheads:
     - "A Linktree-esque Jekyll theme, compatible with Decap CMS."
 
 email: paul@roub.net
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
     A Linktree-esque Jekyll theme, compatible with Decap CMS.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://linky.roub.net/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://linky.roub.net"
 github_username: paulroub
 
 plausible_io: linky.roub.net
@@ -31,3 +31,8 @@ linky:
 
 collections:
     - links
+
+# tell the jekyll-feed plugin to include the links collection
+feed:
+    collections:
+        - links

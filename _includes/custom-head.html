@@ -10,3 +10,12 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta property="og:image" content="https://linky.roub.net/images/linky-home.png" />
+
+{% comment %}
+  Show only the Atom feed for our links, since that's all *this* site uses. If you were also using a feed for blog posts,
+  you could just use the feed_meta tag to reference both feeds.
+
+  jekyll-feed does not currently have a way to combine the two.
+{% endcomment %}
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed for {{ site.title }}" href="{{ "/feed/links.xml" | relative_url }}" />
