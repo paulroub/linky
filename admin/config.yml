@@ -37,6 +37,7 @@ collections:
                 name: "expires",
                 widget: "datetime",
                 required: false,
+                date_format: "YYYY-MM-DD",
                 description: "Don't show this link after this date. Note that this requires the site to be re-deployed, it won't just drop off on its own.",
             }
       sortable_fields: ["priority", "title"]

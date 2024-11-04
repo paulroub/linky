@@ -1,3 +1,11 @@
+linky 0.1.9
+-------------------------
+
+#### FIXED
+
+- The "expires" logic was failing with Decap-created expiration dates. We now handle both quoted (string) and unquoted (datetime) representations.
+
+
 linky 0.1.8
 -------------------------
 
