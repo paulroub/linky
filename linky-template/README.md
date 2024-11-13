@@ -9,22 +9,13 @@ A linktree-esque theme, built for static hosting and easy maintenance with [Deca
 
 ## Installation
 
-### Deploy to Netlify
-
-To create a new repo and a linked Netlify site, ready to configure:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)][deploy]
-
-
-### Manually add this theme
-
-To use this theme with an existing (probably bare) Jekyll site, add this line to your [Jekyll][jekyll] site's `Gemfile`:
+Add this line to your [Jekyll][jekyll] site's `Gemfile`:
 
 ```ruby
 gem "jekyll-theme-linky"
 ```
 
-And add this line to your Jekyll site's `_config.yml` (or replace any other `theme` configuration):
+And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
 theme: jekyll-theme-linky
@@ -171,4 +162,3 @@ The theme is available as open source under the terms of the [MIT License](https
 [admin]: https://github.com/paulroub/linky/blob/main/admin/
 [admin-config]: https://github.com/paulroub/linky/blob/main/admin/config.yml
 [jekyll]: https://jekyllrb.com/
-[deploy]: https://app.netlify.com/start/deploy?repository=https://github.com/paulroub/linky&create_from_path=linky-template
