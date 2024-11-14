@@ -19,6 +19,7 @@ url: "https://example.com/"
 # mastodon_username: "@username@example.host"
 # cashapp_username: "my_cashapp_username"
 # venmo_username: "my_venmo_username"
+# bluesky_username: "my_bluesky_username" 
 
 # uncomment for plausible.io analytics, should match the "url" above
 # plausible_io: example.com

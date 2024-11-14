@@ -11,7 +11,7 @@ if [ "$txt_version" != "$gem_version" ]; then
     exit 1
 fi
 
-if ! grep -Fq "linky $txt_version" CHANGELOG.md; then
+if ! grep -Fq "[$txt_version]" CHANGELOG.md; then
     echo "Version $txt_version not found in CHANGELOG.md"
     exit 1
 fi
@@ -35,3 +35,5 @@ bundle exec gem build linky.gemspec
 bundle exec gem push "jekyll-theme-linky-$txt_version.gem"
 git push --tags
 git push
+
+# gh release create "v$txt_version" --title "v$txt_version" --notes-file CHANGELOG.md

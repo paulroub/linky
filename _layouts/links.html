@@ -69,6 +69,24 @@ layout: default
             </li>
         {%- endif -%}
 
+        {%- if site.bluesky_username -%}
+            {% comment %}
+                Be forgiving -- allow bare handle (and add bsky.social) or use as-is if there's a dot
+            {% endcomment %}
+
+            {% assign parts = site.bluesky_username | split: "." %}
+
+            {% if parts.size == 1 %}
+            {%     assign handle = site.bluesky_username | append: ".bsky.social" %}
+            {% else %}
+            {%     assign handle = site.bluesky_username %}
+            {% endif %}
+            <li class="social-link">
+                <a href="https://bsky.app/profile/{{ handle }}"
+                    >{% include bluesky-logo.svg %}</a>
+            </li>
+        {%- endif -%}
+
         {%- if site.cashapp_username -%}
         <li class="social-link">
             <a href="https://cash.app/${{ site.cashapp_username }}"
