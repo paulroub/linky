@@ -87,6 +87,13 @@ layout: default
             </li>
         {%- endif -%}
 
+        {%- if site.telephone_number -%}
+        <li class="social-link">
+            <a href="tel:${{ site.cashapp_username }}"
+                >{% include phone-logo.svg %}</a>
+        </li>
+        {%- endif -%}
+
         {%- if site.cashapp_username -%}
         <li class="social-link">
             <a href="https://cash.app/${{ site.cashapp_username }}"

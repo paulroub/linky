@@ -10,11 +10,6 @@ url: "https://example.com/"
 
 # uncomment and fill in any social IDs you want linked from the top of your page
 
-# this is set in the _config.yml inherited from the theme, so we need to
-# cancel it out if we're not using it. Replace with your own username if you
-# do want it.
-github_username: false
-
 # email: "email@example.com"
 # tiktok_username: "my_tiktok_username"
 # github_username: "my_github_username"
@@ -25,6 +20,7 @@ github_username: false
 # cashapp_username: "my_cashapp_username"
 # venmo_username: "my_venmo_username"
 # bluesky_username: "my_bluesky_username"
+# telephone_number: "999-999-9999"
 
 # uncomment for plausible.io analytics, should match the "url" above
 # plausible_io: example.com
