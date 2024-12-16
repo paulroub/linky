@@ -89,7 +89,7 @@ layout: default
 
         {%- if site.telephone_number -%}
         <li class="social-link">
-            <a href="tel:${{ site.cashapp_username }}"
+            <a href="tel:{{ site.telephone_number }}"
                 >{% include phone-logo.svg %}</a>
         </li>
         {%- endif -%}
