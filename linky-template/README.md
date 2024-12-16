@@ -144,14 +144,12 @@ Copy the admin/index.html file from this repo into your Decap admin directory if
 
 ## Quick Start Script
 
-To help wean your friends off Linktree more quickly, there's a Python script in the [scripts][scripts] folder that takes a linktree URL and attemps to pull its links, with ordering and thumbnails intact, into entries in your `_links` folder.
-
-Assuming a functioning Python 3 environment ([virtual][venv] or otherwise), install the minimal requirements and run the script, passing in the URL of the Linktree page we want to replicate:
+To help wean your friends off Linktree more quickly, there's a script in the [scripts][scripts] folder that takes a linktree URL and attemps to pull its links, with ordering and thumbnails intact, into entries in your `_links` folder.
 
 ```sh
 cd scripts
-pip install -r requirements.txt
-python3 get_links.py https://linktr.ee/the-linktree-thing-in-question
+bundle install
+bundle exec ruby get_links.rb https://linktr.ee/the-linktree-thing-in-question
 ```
 
 ## Contributing
@@ -173,4 +171,3 @@ The theme is available as open source under the terms of the [MIT License](https
 [admin-config]: https://github.com/paulroub/linky/blob/main/admin/config.yml
 [scripts]: https://github.com/paulroub/linky/blob/main/scripts/
 [jekyll]: https://jekyllrb.com/
-[venv]: https://realpython.com/python-virtual-environments-a-primer/
