@@ -142,6 +142,18 @@ Copy the admin/index.html file from this repo into your Decap admin directory if
 <script src="/assets/preview.js"></script>
 ```
 
+## Quick Start Script
+
+To help wean your friends off Linktree more quickly, there's a Python script in the [scripts][scripts] folder that takes a linktree URL and attemps to pull its links, with ordering and thumbnails intact, into entries in your `_links` folder.
+
+Assuming a functioning Python 3 environment ([virtual][venv] or otherwise), install the minimal requirements and run the script, passing in the URL of the Linktree page we want to replicate:
+
+```sh
+cd scripts
+pip install -r requirements.txt
+python3 get_links.py https://linktr.ee/the-linktree-thing-in-question
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/paulroub/linky. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
@@ -154,11 +166,11 @@ The theme is available as open source under the terms of the [MIT License](https
 [ll]: https://github.com/paulroub/linky/blob/main/_layouts/links.html
 [config]: https://github.com/paulroub/linky/blob/main/_config.yml
 [linky-home]: https://linky.roub.net/
-[decap-home-image]: images/decap-home.png
-[decap-detail-image]: images/decap-detail.png
 [netlify]: https://netlify.com/
 [decap]: https://decapcms.org/
 [decap-netlify]: https://decapcms.org/docs/choosing-a-backend/#setup-on-netlify
 [admin]: https://github.com/paulroub/linky/blob/main/admin/
 [admin-config]: https://github.com/paulroub/linky/blob/main/admin/config.yml
+[scripts]: https://github.com/paulroub/linky/blob/main/scripts/
 [jekyll]: https://jekyllrb.com/
+[venv]: https://realpython.com/python-virtual-environments-a-primer/

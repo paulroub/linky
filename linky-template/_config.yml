@@ -38,6 +38,7 @@ exclude:
     - bin
     - linky.gemspec
     - netlify.toml
+    - scripts
 
 linky:
     body_background: "#030303"

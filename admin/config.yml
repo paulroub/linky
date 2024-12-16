@@ -25,6 +25,7 @@ collections:
                 name: "image",
                 widget: "image",
                 description: "This will be displayed at a fairly small size, and cropped to fit in a circle. A square or circular image will work best.",
+                required: false,
             }
           - {
                 label: "Priority",

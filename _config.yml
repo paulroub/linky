@@ -22,6 +22,7 @@ exclude:
     - linky.gemspec
     - netlify.toml
     - package*.json
+    - linky-template
 
 linky:
     body_background: "#030303"
