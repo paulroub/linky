@@ -29,6 +29,7 @@ linky:
     body_foreground: "#F0F0F0"
     button_background: "#f16293"
     social_button_color: "#ffffff"
+    add_rel_me_links: true # add <link rel="me"> tags for each social media account
 
 collections:
     - links

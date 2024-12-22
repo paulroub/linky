@@ -1,0 +1,64 @@
+{%- if site.linky.add_rel_me_links -%}
+
+    {%- if site.tiktok_username -%}
+
+        <link rel="me" href="https://tiktok.com/@{{ site.tiktok_username }}" />
+
+    {%- endif -%}
+
+    {%- if site.github_username -%}
+
+        <link rel="me" href="https://github.com/{{ site.github_username }}" />
+
+    {%- endif -%} {%- if site.instagram_username -%}
+
+        <link rel="me" href="https://instagram.com/{{ site.instagram_username }}" />
+
+    {%- endif -%}
+
+
+    {%- if site.threads_username -%}
+
+        <link rel="me" href="https://threads.net/@{{ site.threads_username }}" />
+
+    {%- endif -%}
+
+    {%- if site.pinterest_username -%}
+
+        <link rel="me" href="https://pinterest.com/{{ site.pinterest_username }}" />
+
+    {%- endif -%}
+
+    {%- if site.mastodon_username -%}
+        {% comment %}
+            Be forgiving -- allow for the username to be entered with or without the leading @
+        {% endcomment %}
+
+        {% assign parts = site.mastodon_username | split: "@" %}
+        {% if parts.size == 3 %}
+        {%     assign parts = parts | shift %}
+        {% endif %}
+
+            <link rel="me" href="https://{{ parts[1] }}/@{{ parts[0] }}"
+                />
+
+    {%- endif -%}
+
+    {%- if site.bluesky_username -%}
+        {% comment %}
+            Be forgiving -- allow bare handle (and add bsky.social) or use as-is if there's a dot
+        {% endcomment %}
+
+        {% assign parts = site.bluesky_username | split: "." %}
+
+        {% if parts.size == 1 %}
+        {%     assign handle = site.bluesky_username | append: ".bsky.social" %}
+        {% else %}
+        {%     assign handle = site.bluesky_username %}
+        {% endif %}
+
+            <link rel="me" href="https://bsky.app/profile/{{ handle }}" />
+
+    {%- endif -%}
+
+{%- endif %}

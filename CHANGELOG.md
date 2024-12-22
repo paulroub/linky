@@ -5,12 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.5] - 2024-12-23
+
+### Added
+
+- Add linky.add_rel_me_links config
+
 ## [0.2.4] - 2024-12-16
 
 ### Added
 
 - Site template now includes an import script
-- Add fallback link icon (so an explicit image is no longer required)
+- Add fallback link icon
 
 ## [0.2.3] - 2024-12-16
 
@@ -134,6 +140,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove debugging code
 - Remove extra front matter
 
+[0.2.5]: https://github.com/paulroub/linky/compare/v0.2.4..v0.2.5
 [0.2.4]: https://github.com/paulroub/linky/compare/v0.2.3..v0.2.4
 [0.2.3]: https://github.com/paulroub/linky/compare/0.2.2..v0.2.3
 [0.2.2]: https://github.com/paulroub/linky/compare/v0.2.1..0.2.2

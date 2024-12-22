@@ -83,6 +83,24 @@ linky:
 
 These alter the page's background and foreground, and the background and foreground of each link "button".
 
+### rel=me links
+
+Many IndieWeb sites will use [`rel="me"` links][relme] to verify related identities on different platforms. If the `add_rel_me_links` variable is defined as `true`, we'll incude appropriate headers for each social media site. So, given:
+
+```yml
+github_username: mygithub
+mastodon_username: @me@example.com
+
+linky:
+    add_rel_me_links: true
+```
+
+Our `<head>` element will include:
+
+```html
+  <link rel="me" href="https://github.com/mygithub" />
+  <link rel="me" href="https://example.com/@me" />
+```
 
 ### Link Metadata
 
@@ -172,3 +190,4 @@ The theme is available as open source under the terms of the [MIT License](https
 [admin-config]: https://github.com/paulroub/linky/blob/main/admin/config.yml
 [jekyll]: https://jekyllrb.com/
 [deploy]: https://app.netlify.com/start/deploy?repository=https://github.com/paulroub/linky&create_from_path=linky-template
+[relme]: https://indieweb.org/rel-me
