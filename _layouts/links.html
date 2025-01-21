@@ -87,6 +87,27 @@ layout: default
             </li>
         {%- endif -%}
 
+        {%- if site.youtube_username -%}
+            <li class="social-link">
+                <a href="https://www.youtube.com/@{{ site.youtube_username }}"
+                    >{% include youtube-logo.svg %}</a>
+            </li>
+        {%- endif -%}
+
+        {%- if site.facebook_username -%}
+            <li class="social-link">
+                <a href="https://www.facebook.com/{{ site.facebook_username }}"
+                    >{% include facebook-logo.svg %}</a>
+            </li>
+        {%- endif -%}
+
+        {%- if site.discord_username -%}
+            <li class="social-link">
+                <a href="https://discord.gg/{{ site.discord_username }}"
+                    >{% include discord-logo.svg %}</a>
+            </li>
+        {%- endif -%}
+
         {%- if site.telephone_number -%}
         <li class="social-link">
             <a href="tel:{{ site.telephone_number }}"
