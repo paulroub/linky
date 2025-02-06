@@ -1,23 +1,23 @@
 {
-  "name": "linky",
-  "version": "1.0.0",
-  "description": "Support tools for linky theme, not required for distribution or usage.",
-  "main": "index.js",
-  "scripts": {
-    "lint": "npx stylelint 'assets/*.css'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/paulroub/linky.git"
-  },
-  "author": "Paul Roub <paul@roub.net>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/paulroub/linky/issues"
-  },
-  "homepage": "https://github.com/paulroub/linky#readme",
-  "devDependencies": {
-    "stylelint": "^16.9.0",
-    "stylelint-config-standard": "^36.0.1"
-  }
+    "name": "linky",
+    "version": "1.0.0",
+    "description": "Support tools for linky theme, not required for distribution or usage.",
+    "main": "index.js",
+    "scripts": {
+        "lint": "npx stylelint 'assets/*.scss'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/paulroub/linky.git"
+    },
+    "author": "Paul Roub <paul@roub.net>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/paulroub/linky/issues"
+    },
+    "homepage": "https://github.com/paulroub/linky#readme",
+    "devDependencies": {
+        "stylelint": "^16.9.0",
+        "stylelint-config-standard": "^37.0"
+    }
 }

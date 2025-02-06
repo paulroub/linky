@@ -132,38 +132,18 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
     {%- endif -%}
 
-    <ul class="links">
+    {%- assign uncategorized_links = site.links | where_exp: "link", "link.category == nil" -%}
+    {%- if uncategorized_links.size > 0 -%}
+        {% include link-category.html link_list=uncategorized_links %}
+    {%- endif -%}
 
-
-        {% assign current_date = site.time | date: "%Y-%m-%d" %}
-
-        {% assign valid_links = '' | split: '' %}
-
-        {% for link in site.links %}
-            {% if link.expires and link.expires != nil %}
-                {% assign exp_date = link.expires | date: "%Y-%m-%d" %}
-                {% if exp_date > current_date %}
-                    {% assign valid_links = valid_links | push: link %}
-                {% endif %}
-            {% else %}
-                {% assign valid_links = valid_links | push: link %}
-            {% endif %}
-        {% endfor %}
-
-        {% assign priorities = valid_links | sort: "priority" | group_by: 'priority'  %}
-
-        {% for priority in priorities %}
-            {% assign sorted_links = priority.items | sort: 'title' %}
-
-            {% for link in sorted_links %}
-                <li class="link" data-priority="{{ link.priority }}">
-                    <a href="{{ link.link }}">
-                            <img src="{{ link.image | default: "/assets/link-default.svg" }}" class="link-logo" alt="{{ link.title }}"> </a>
-                    <a class="link-desc" href="{{ link.link }}">{{ link.title }}</a>
-                </li>
-            {% endfor %}
-        {% endfor %}
-    </ul>
+    {%- assign categories = site.links | map: "category" | uniq | where_exp: "category", "category != nil" -%}
+    {%- for category in categories -%}
+        {%- assign categorized_links = site.links | where: "category", category -%}
+        {%- if categorized_links.size > 0 -%}
+            {% include link-category.html link_list=categorized_links title=category %}
+        {%- endif -%}
+    {%- endfor -%}
 
     {{ content }}
 </div>

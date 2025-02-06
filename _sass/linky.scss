@@ -108,7 +108,7 @@ li.link {
     min-width: 150px;
     max-width: 600px;
     background-color: var(--button-background);
-    padding: 0.5em;
+    padding: 0.5em 2.5em 0.5em 0.5em;
     border-radius: 1em;
     cursor: pointer;
     text-align: center;
@@ -164,4 +164,15 @@ h1 {
     font-weight: 700;
     margin: 0 auto;
     text-align: center;
+}
+
+.section-header {
+    margin: 0 20px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 125%;
+}
+
+.link:first-child {
+    margin-top: 0.5rem;
 }
