@@ -32,7 +32,8 @@ linky:
     add_rel_me_links: true # add <link rel="me"> tags for each social media account
 
 collections:
-    - links
+    links:
+        title: "My linx!"
 
 # tell the jekyll-feed plugin to include the links collection
 feed:

@@ -113,6 +113,7 @@ image: "/images/example.jpg"
 title: 'My link test'
 priority: 5
 expires: 2024-11-11
+category: 'Example'
 ---
 ```
 
@@ -139,6 +140,11 @@ expires: 2024-11-11
     A date after which this link should no longer be displayed.
 
     Note that this will only take effect on a rebuild; there's no runtime JavaScript, etc. to disable a link that's already been deployed.
+
+- `category`
+
+    Links will be grouped by category (if any). Items without a category field will be grouped together at the
+    top of the list; other items will be separated by category headers.
 
 
 ## Update Links with Decap CMS
