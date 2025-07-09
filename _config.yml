@@ -1,10 +1,10 @@
 title: Linky
 subheads:
-    - "A Linktree-esque Jekyll theme, compatible with Decap CMS."
+    - "A Linktree-esque Jekyll theme, compatible with Sveltia CMS."
 
 email: paul@roub.net
 description: >-
-    A Linktree-esque Jekyll theme, compatible with Decap CMS.
+    A Linktree-esque Jekyll theme, compatible with Sveltia CMS.
 baseurl: ""
 url: "https://linky.roub.net"
 github_username: paulroub
