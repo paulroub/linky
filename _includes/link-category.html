@@ -13,7 +13,7 @@
     {% assign valid_links = '' | split: '' %}
 
     {% for link in link_list %}
-        {% if link.expires and link.expires != nil %}
+        {% if link.expires and link.expires != nil and link.expires != '' %}
             {% assign exp_date = link.expires | date: "%Y-%m-%d" %}
             {% if exp_date > current_date %}
                 {% assign valid_links = valid_links | push: link %}
